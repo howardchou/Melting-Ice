@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/phaser.min.js"></script>
+    <script src="./L1.js"></script>
+    <script src="./L2.js"></script>
+    <script src="./L3.js"></script>
+    <script src="./home.js"></script>
+    <script src="./menu.js"></script>
+    <title>Ice</title>
+</head>
+<body>
+    <script>
+        const config = {
+            type: Phaser.AUTO,
+            width: 1242,
+            height: 699,
+            scale: {
+                // mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH
+            },
+            physics:{
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 400 },  
+                    debug: 0
+                }
+            },
+            scene: [home, L1, L2, L3, menu],
+            audio: {
+                disableWebAudio: true
+            }
+        };
+        var game = new Phaser.Game(config);
+        window.onload = () => {
+            WebFontConfig = {
+                google: {
+                    families: ['VT323', 'Finger Paint']
+                },
+                active: function () {
+                    console.log("loaded!!!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
