@@ -345,6 +345,7 @@ var L2 = new Phaser.Class({
                 audioJump_2.play();
             }
 
+            //pass
             if(collStars_2 == 3){
                 exit.anims.play('exit_sprite_open',true);
             }else if(collStars_2 != 3){
